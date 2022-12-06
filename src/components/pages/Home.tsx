@@ -1,5 +1,5 @@
 import { memo, FC } from "react";
 
 export const Home: FC = memo(() => {
-  return <p>Homeページです</p>
+  return <p>Homeページです。。。</p>
 });
