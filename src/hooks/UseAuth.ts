@@ -31,7 +31,7 @@ export const UseAuth = () => {
         showMessage({title: "ログインできません", status: "error"});
       })
       .finally(() => setLoading(false))
-    }, [navigate])
+  }, [navigate])
 
   return { login, loading };
 }
