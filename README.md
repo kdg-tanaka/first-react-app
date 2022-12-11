@@ -44,3 +44,48 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+```
+//
+const [***, set***] = useState('');
+const onChange*** = (e:ChangeEvent<HTMLInputElement>) => set***(e.target.value)
+<Input onChange={onChange***}>***</Input>
+
+//
+const getUsers = useCallback(() => {
+  axios
+    .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
+    .then((res) => setUsers(res.data))
+    .catch(() => {
+      alert("error");
+    })
+    .finally(() => {
+    })
+}, [])
+
+// loadingがtrueの時 → doSomethingA、falseの時 → doSomethingB
+{loading ? (doSomethingA) : (doSomethingB)}
+
+// isAdminがtrueの時 → doSomething
+{isAdmin && (doSomething)}
+
+// isAdminがfalseの時 → isReadonlyが有効
+<Input value="xxx" isReadonly={!isAdmin}>
+
+// user?.nameがnullもしくはundefinedの時 → 空文字を挿入（stringを指定）
+setName(user?.name ?? '');
+
+// isAdminは必須じゃない＆デフォルトfalse
+type Props = {
+  user: User | null; //User配列またはnull
+  isOpen: boolean;
+  isAdmin?: boolean; //isAdminは必須じゃない
+  onClose: () => void;
+}
+
+export const xxx = () => {
+  const { user, isOpen, isAdmin = false, onClose } = props;
+  ......
+}
+
+```

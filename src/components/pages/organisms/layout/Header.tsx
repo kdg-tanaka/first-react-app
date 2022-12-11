@@ -26,7 +26,8 @@ export const Header = memo(() => {
         display={{base: "none", md: "flex"}}
       >
         <ChakraLink pr={4}><RouterLink to="/home/user_management">ユーザー一覧</RouterLink></ChakraLink>
-        <ChakraLink><RouterLink to="/home/setting">設定</RouterLink></ChakraLink>
+        <ChakraLink pr={4}><RouterLink to="/home/setting">設定</RouterLink></ChakraLink>
+        <ChakraLink><RouterLink to="/home/sample">サンプルコード</RouterLink></ChakraLink>
       </Flex>
       <MenuIconButton onOpen={onOpen} />
       <MenuDrawer onClose={onClose} isOpen={isOpen} />
