@@ -88,4 +88,11 @@ export const xxx = () => {
   ......
 }
 
+//
+git status
+git add .
+git status
+git commit -m "xxxxxx"
+git branch --contains
+git push origin master
 ```
